@@ -1,0 +1,38 @@
+Fundamentals:
+
+Create React App -
+Function Components -
+Class Components
+JSX -
+Props and State -
+useState and useEffect Hooks
+setState and component lifecycle methods
+Conditional Rendering
+Lists and keys
+Building Simple Forms
+
+
+Advanced Topics :
+
+Context
+Higher Order Functions
+Render props
+Refs
+Error Boundaries
+Portals
+HTTP Requests — GET and POST
+Hooks: useContext, useReducer, useRef, useMemo, useCallback, Custom hooks
+
+
+Ecosystem
+
+State Management — Redux, Appolo Client(grapgQL)
+Routing - React Router
+Styling - Tailwind CSS
+Forms - Formik
+Testing - Jest + React Testing Library, cyprus
+Misc- Typescript, Firebase, Practical react libraries
+Next step - Next JS
+
+
+
