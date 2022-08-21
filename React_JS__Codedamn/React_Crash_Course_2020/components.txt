@@ -1,0 +1,11 @@
+everything in webpage are components
+
+eg. Home.js -> Header.js + Content.js
+    Blog.js -> Header.js + Comments.js + Footer.js
+
+The function App in App.js represents a component
+
+components are of 2 types :
+
+  -  class components
+  -  functional components

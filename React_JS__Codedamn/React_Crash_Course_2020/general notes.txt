@@ -1,0 +1,10 @@
+JS = UI(JSX) + Logic.
+
+Every function returns one div component which is rendered inside another div component.
+
+React converts JSX tags into HTML DOM element tree.
+ReactDOM renders those generated HTML DOM element tree.
+
+eg. ReactDOM.render(<App/>, document.getElementById("root"));
+
+React converts <App/> jsx element into HTML element tree and ReactDOM renders that generated HTML tree as child element tree of id=root element.

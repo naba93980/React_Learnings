@@ -1,0 +1,11 @@
+Every function returns one html component which is rendered inside another html component.
+
+Public folder contains all static assets.
+
+CRA utility under the hood creates a static file server, on which it is serving the public folder.
+
+On final build for production, all files are static.
+
+
+
+
