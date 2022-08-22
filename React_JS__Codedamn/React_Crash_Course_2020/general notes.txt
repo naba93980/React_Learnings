@@ -8,3 +8,6 @@ ReactDOM renders those generated HTML DOM element tree.
 eg. ReactDOM.render(<App/>, document.getElementById("root"));
 
 React converts <App/> jsx element into HTML element tree and ReactDOM renders that generated HTML tree as child element tree of id=root element.
+
+
+valid jsx elements - null, numbers, HTML, strings, arrays

@@ -9,3 +9,5 @@ components are of 2 types :
 
   -  class components
   -  functional components
+
+all custom components starts with capital letter, if u start with small letter then react would interpret it as html tag and not as a component tag
