@@ -1,5 +1,5 @@
 import React from "react";
-class MyComponent extends React.Component {
+class MyClassComponent extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -30,4 +30,4 @@ class MyComponent extends React.Component {
     );
   }
 }
-export default MyComponent;
+export default MyClassComponent;
