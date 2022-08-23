@@ -1,15 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from './App'
-// import MyComponent from "./MyComponent";
+import HelloWorld from './HelloWorld';
+import MyClassComponent from "./MyClassComponent";
 
 
-ReactDOM.render(<App/>, document.getElementById("root"), () => {
-    console.log( "app div rendered inside root div" );
-});
+// Rendering HelloWorld functional component -
 
-
-// ReactDOM.render(<MyComponent/>, document.getElementById("root"), () => {
-//     console.log( "my component div rendered inside root div" );
+// ReactDOM.render(<HelloWorld />, document.getElementById("root"), () => {
+//   console.log("HelloWorld rendered inside root div");
 // });
+
+
+
+// Rendering MyClassComponent - 
+
+ReactDOM.render(<MyClassComponent/>, document.getElementById("root"), () => {
+    console.log( "my component div rendered inside root div" );
+});
 
