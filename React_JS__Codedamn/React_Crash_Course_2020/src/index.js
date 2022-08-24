@@ -5,7 +5,9 @@ import ReactDOM from "react-dom";
 // import JSX from './JSX'
 // import ConditionalRendering from "./ConditionalRendering";
 // import NestingExp from "./NestingExpression";
-import EmptyTag from "./EmptyTag";
+// import EmptyTag from "./EmptyTag";
+// import Event from "./ClickEvent";
+import UseState from "./UseState";
 
 
 // Rendering HelloWorld component -
@@ -43,9 +45,14 @@ import EmptyTag from "./EmptyTag";
 //     console.log( "nested expressions in jsx rendered inside root div" );
 // });
 
+// Rendering EmptyTag element
+// ReactDOM.render(<EmptyTag />, document.getElementById("root"));
 
-ReactDOM.render(<EmptyTag />, document.getElementById("root"), () => {
-    console.log( "nested expressions in jsx rendered inside root div" );
-});
 
+// Rendering Event element
+// ReactDOM.render(<Event />, document.getElementById("root"));
+
+
+// useState in a component
+ReactDOM.render(<UseState />, document.getElementById("root"));
 
