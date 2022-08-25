@@ -7,8 +7,8 @@ import ReactDOM from "react-dom";
 // import NestingExp from "./NestingExpression";
 // import EmptyTag from "./EmptyTag";
 // import Event from "./ClickEvent";
-// import UseState from "./UseState";
-import DirectDOMaccess from "./StateComponent"
+// import DirectDOMaccess from "./StateComponent"
+import UseState from "./UseState";
 
 
 // Rendering HelloWorld component -
@@ -51,10 +51,10 @@ import DirectDOMaccess from "./StateComponent"
 
 
 // useState in a component
-// ReactDOM.render(<UseState />, document.getElementById("root"));
+ReactDOM.render(<UseState />, document.getElementById("root"));
 
 
 // Rendering a component directly accessing DOM
-ReactDOM.render(<DirectDOMaccess />, document.getElementById("root"));
+// ReactDOM.render(<DirectDOMaccess />, document.getElementById("root"));
 
 
