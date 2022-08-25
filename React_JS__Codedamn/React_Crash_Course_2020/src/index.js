@@ -51,7 +51,7 @@ import UseState from "./UseState";
 
 
 // useState in a component
-ReactDOM.render(<UseState />, document.getElementById("root"));
+// ReactDOM.render(<UseState />, document.getElementById("root"));
 
 
 // Rendering a component directly accessing DOM
