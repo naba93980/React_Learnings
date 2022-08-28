@@ -1,0 +1,5 @@
+<div> hello world {5 + 5} </div> is transpiled into React object - 
+
+React.createElement('div', {props}, React.createChildElement(...), "hello world", 5+5);
+
+We can write anything inside jsx expression {}, which we can pass as an argument to a function.

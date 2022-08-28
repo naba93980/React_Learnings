@@ -1,0 +1,4 @@
+{[ <h1>hi</h1> , "2", 3, 4]}  
+    - all the elements inside the array are seperately evaluated as jsx expression, and are put into DOM as separate elements
+
+always pass key prop to elements generated using iteration

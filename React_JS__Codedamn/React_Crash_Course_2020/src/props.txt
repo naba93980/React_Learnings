@@ -1,0 +1,1 @@
+Props are basically key:value objects passed to child components, the key-value are attributes in jsx tag where the values should be either a jsx expression or a quoted JSX text
