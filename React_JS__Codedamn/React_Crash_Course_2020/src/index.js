@@ -15,7 +15,11 @@ import ReactDOM from "react-dom";
 // import ShortCircuitCondRend from "./ShortCircuitCondRend";
 // import Greet from "./Props"
 // import Greet from "./ChildProp"
-import List from "./List";
+// import List from "./List";
+// import Routing from "./Routing";
+// import RoutingWithuseState from "./RoutingWithuseState";
+// import ParameterizedRouting from './ParameterizedRouting'
+import UseRef from './UseRef'
 
 // Rendering HelloWorld component -
 // ReactDOM.render(<HelloWorld />, document.getElementById("root"), () => {
@@ -68,4 +72,14 @@ import List from "./List";
 
 // ReactDOM.render(<Greet />, document.getElementById('root'));
 
-ReactDOM.render(<List />, document.getElementById('root'));
+// ReactDOM.render(<List />, document.getElementById('root'));
+
+// ReactDOM.render(<RoutingWithuseState />, document.getElementById("root"));
+
+// ReactDOM.render(<Routing />, document.getElementById('root'));
+
+// ReactDOM.render(<ParameterizedRouting />, document.getElementById('root'));
+
+
+ReactDOM.render(<UseRef />, document.getElementById('root'));
+
