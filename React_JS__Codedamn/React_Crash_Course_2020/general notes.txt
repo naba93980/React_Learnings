@@ -13,3 +13,6 @@ React converts <App/> jsx element into HTML element tree and ReactDOM renders th
 valid jsx elements - null, numbers, HTML, strings, arrays
 
 React code must not use DOM api like document.getElementById() etc. - it is not 'React'ive way, we should use React DOM api to manipulate DOM
+
+A component is re-rendered by react automatically only if state and props of the component changes.
+
