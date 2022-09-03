@@ -19,7 +19,9 @@ import ReactDOM from "react-dom";
 // import Routing from "./Routing";
 // import RoutingWithuseState from "./RoutingWithuseState";
 // import ParameterizedRouting from './ParameterizedRouting'
-import UseRef from './UseRef'
+// import UseRef from './UseRef';
+// import UseEffect from './UseEffect';
+import UseContext from './PropsDrilling&Context/UseContext';
 
 // Rendering HelloWorld component -
 // ReactDOM.render(<HelloWorld />, document.getElementById("root"), () => {
@@ -81,5 +83,12 @@ import UseRef from './UseRef'
 // ReactDOM.render(<ParameterizedRouting />, document.getElementById('root'));
 
 
-ReactDOM.render(<UseRef />, document.getElementById('root'));
+// ReactDOM.render(<UseRef />, document.getElementById('root'));
+
+
+// ReactDOM.render(<UseEffect />, document.getElementById('root'));
+
+ReactDOM.render(<UseContext />, document.getElementById('root'));
+
+
 
