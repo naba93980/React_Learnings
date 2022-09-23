@@ -1,8 +1,10 @@
 import React from 'react'
 
-var footer = () => {
+export function Footer(){
   return (
-    <div>footer</div>
-  )
+    <footer className='bg-dark text-light'>
+      {<p className='text-center m-0'>Copyright &copy; mytodolist.com</p>}
+    </footer>
+  );
 }
-export default footer;
+export default Footer;
