@@ -12,7 +12,7 @@ export function Todoitem(props) {
 
   return (
     <>
-      <div className="col-auto">
+      <div className="col-12">
         {<h2>{props.item.sno}</h2>}
         {<p>{props.item.title}</p>}
         {<p>{props.item.description}</p>}
