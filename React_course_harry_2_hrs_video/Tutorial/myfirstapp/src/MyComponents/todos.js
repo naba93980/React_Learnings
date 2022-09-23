@@ -1,18 +1,11 @@
 import React from "react";
 import { Todoitem } from "./todoitem";
-export const Todos = (props) => {
-  console.log(props.todosarrayprops[1]);
+export function Todos(props) {
   return (
-    <div>
-      <h1>to do list</h1>
-      {/* <Todoitem todoarrelementobject={props.todosarrayprops[0]} />
-      <br />
-      <Todoitem todoarrelementobject={props.todosarrayprops[1]} />
-      <br />
-      <Todoitem todoarrelementobject={props.todosarrayprops[2]} /> */}
-      {props.todosarrayprops.map((element) => {
-        return <Todoitem todoarrelementobject={element} />;
+    <div className="row justify-content-around">
+      {props.todos.length===0?"no todos to display": props.todos.map((e, i) => {
+        return <Todoitem key={i} item={e} deleteTodo={props.deleteTodo} />;
       })}
     </div>
   );
-};
+}
