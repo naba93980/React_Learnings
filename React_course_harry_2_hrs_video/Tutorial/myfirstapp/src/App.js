@@ -1,37 +1,40 @@
 import React from "react";
-import { useState } from "react";
-import { AddTodo } from "./MyComponents/addtodo.js"
+import { useState} from "react";
+import { AddTodo } from "./MyComponents/addtodo.js";
 import { Header } from "./MyComponents/header.js";
 import { Todos } from "./MyComponents/todos.js";
 import { Footer } from "./MyComponents/footer.js";
 
 function App() {
-  
-  let todosArray = [
-    {
-      sno: 1,
-      title: "go to market",
-      description: " 1yo need to go maret to get this done",
-    },
-    {
-      sno: 2,
-      title: "go to mall",
-      description: " 2yo need to go maret to get this done",
-    },
-    {
-      sno: 3,
-      title: "go to ghat",
-      description: " 3yo need to go maret to get this done",
-    },
-  ];
-  const [todos, setToDosArray] = useState(todosArray);
+  // array holding the todos
+  let todosArray = [];
+
+  // todos state
+  const [todos, setToDosArray] = useState(updateTodosArray());
+
+  // function to update todosArray from localStorage
+  function updateTodosArray() {
+    if (localStorage.length) {
+      for (let i = 0; i < localStorage.length; i++) {
+        const todoItem = localStorage.getItem(localStorage.key(i));
+        todosArray.push(JSON.parse(todoItem));
+      }
+    }
+    return todosArray;
+  }
+
+  //function to delete a todoitem from todosArray and remove from localStorage
   const deleteTodo = (todoitem) => {
+    localStorage.removeItem(`${todoitem.title}`);
     setToDosArray((todos) => todos.filter((ele) => ele !== todoitem));
-  }
-  const addTodo = (title, desc) => {
-    let sno = todos.length + 1;
-    setToDosArray([...todos, { sno, title, desc }]);
-  }
+  };
+
+  //function to add a todoitem to todosArray and remove from localStorage
+  const addTodo = (title, description) => {
+    localStorage.setItem(title, JSON.stringify({ title: title, description: description }));
+    setToDosArray([...todos, { title, description }]);
+  };
+
   return (
     <div className="container-fluid p-0">
       <div className="row">
