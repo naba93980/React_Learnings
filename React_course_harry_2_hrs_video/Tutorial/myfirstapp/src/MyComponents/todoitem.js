@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 export function Todoitem(props) {
   // const Delete = (e) => {
@@ -13,7 +13,7 @@ export function Todoitem(props) {
   return (
     <>
       <div className="col-12">
-        {<h2>{props.item.sno}</h2>}
+        {<h2>{props.sno}</h2>}
         {<p>{props.item.title}</p>}
         {<p>{props.item.description}</p>}
         {
