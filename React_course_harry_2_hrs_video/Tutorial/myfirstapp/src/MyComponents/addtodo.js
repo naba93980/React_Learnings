@@ -10,14 +10,34 @@ export function AddTodo({ addTodo }) {
   const changeDesc = (e) => {
     setDesc((desc) => e.target.value);
   };
+
+  const matches = () => {
+    console.log(title);
+    for (let i = 0; i < localStorage.length; i++)
+    {
+      const todoItemTitle = localStorage.key(i);
+      if (title === todoItemTitle)
+        return true;
+    }
+  }
+
   const addThisTodo = (e) => {
-      e.preventDefault();
+    e.preventDefault();
+    if (matches()) {
+      alert("same todo already exists");
+      return;
+    }
+    else {
       addTodo(title, desc);
+      setTitle("");
+      setDesc("");
+      return;
+    }
   };
   return (
     <div className="container mb-5">
       <div className="row justify-content-center">
-        <div className="col-4">
+        <div className="col-12">
           <form onSubmit={addThisTodo}>
             <div className="form-group">
               <label htmlFor="inputTitle">Title</label>
