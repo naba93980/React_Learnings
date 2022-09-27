@@ -16,7 +16,8 @@ export function AddTodo({ addTodo }) {
     for (let i = 0; i < localStorage.length; i++)
     {
       const todoItemTitle = localStorage.key(i);
-      if (title === todoItemTitle)
+      console.log(todoItemTitle);
+      if (todoItemTitle === title.trim())
         return true;
     }
   }
