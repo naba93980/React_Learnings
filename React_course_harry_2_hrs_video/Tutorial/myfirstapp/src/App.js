@@ -4,6 +4,9 @@ import { AddTodo } from "./MyComponents/addtodo.js";
 import { Header } from "./MyComponents/header.js";
 import { Todos } from "./MyComponents/todos.js";
 import { Footer } from "./MyComponents/footer.js";
+import { Home } from "./Routes/home";
+import { About } from "./Routes/about";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   // array holding the todos
@@ -39,10 +42,22 @@ function App() {
     <div className="container-fluid p-0">
       <div className="row">
         <div className="col-12">
+          <BrowserRouter>
           <Header title="My Todos List" />
-          <AddTodo addTodo={addTodo} />
-          <Todos todos={todos} deleteTodo={deleteTodo} />
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <AddTodo addTodo={addTodo} />
+                    <Todos todos={todos} deleteTodo={deleteTodo} />
+                  </>
+                }/>
+              <Route path="home" element={<Home />} />
+              <Route path="about" element={<About />} />
+            </Routes>
           <Footer />
+          </BrowserRouter>
         </div>
       </div>
     </div>
