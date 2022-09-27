@@ -4,7 +4,7 @@ export function Todos(props) {
   return (
     <div className="row justify-content-center p-5" style={
       {
-        minHeight: "90vh"
+        minHeight: "10vh"
       }
     }>
       {
