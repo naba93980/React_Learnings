@@ -29,5 +29,6 @@ module.exports = {
             }
         ]
     },
-    externals: [webpackNodeExternals()]
+    externals: [webpackNodeExternals()],
+    mode: 'production'
 }
