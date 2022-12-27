@@ -2,6 +2,11 @@
   "name": "ssr",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "webpack:server": "webpack --config webpack.server.js --watch",
+    "webpack:start": "nodemon --watch build --exec node build/bundle.js",
+    "dev": "npm-run-all --parallel webpack:*"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -26,12 +31,6 @@
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
     "webpack-node-externals": "^3.0.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
