@@ -1,0 +1,15 @@
+"webpack:server": "webpack --config webpack.server.js --watch", 
+     
+ ==> this command will tell webpack to watch server.js for change 
+            and build bundle.js using webpack.server.js configuration file
+    
+ "webpack:client": "webpack --config webpack.client.js --watch",
+
+ ==>  this command will tell webpack to watch client.js for change 
+            and build public/client_bundle.js using webpack.client.js configuration file
+
+ "webpack:start": "nodemon --watch build --exec node build/bundle.js",
+
+==> this command will tell webpack to watch build/bundle.js for change 
+            and execute the file, that is start server at 5000
+
