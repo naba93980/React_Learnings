@@ -3,6 +3,8 @@ import Home from './components/Home';
 import SuperHeroes from './components/SuperHeroes';
 import RQSuperHeroes from './components/RQSuperHeroes';
 import { QueryClientProvider, QueryClient } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools'
+
 import './App.css'
 
 const queryClient = new QueryClient();
@@ -34,6 +36,7 @@ function App() {
             <Route path='/rq-super-heroes' element={<RQSuperHeroes />} />
           </Routes>
         </BrowserRouter>
+        <ReactQueryDevtools />
       </QueryClientProvider>
     
   );
