@@ -4,18 +4,31 @@ import axios from 'axios'
 
 
 const fetchSuperHeroes = () => {
-  return axios.get('http://localhost:4000/superheroes')
+  return axios.get('http://localhost:4000/superheroes');
   }
 
+const onSuccess = (data) => {
+  console.log(data);
+  console.log('Perform side effect after data fetching');
+}
+const onError = (error) => {
+  console.log(error);
+  console.log('Perform side effect after encountering error');
+}
+
 export default function RQSuperHeroes() {
-  const { isLoading, data, isError, error, isFetching } = useQuery('super-heroes', fetchSuperHeroes,{
-    cacheTime: 5000,
-    staleTime: 10000,
-    refetchOnMount : 'always', // true, false
-    refetchOnWindowFocus: 'always', // true, false
-    refetchInterval: 2000,
-    refetchIntervalInBackground: true
+  const { isLoading, data, isError, error, isFetching, refetch } = useQuery('super-heroes', fetchSuperHeroes,{
+    // cacheTime: 5000,
+    // staleTime: 10000,
+    // refetchOnMount : 'always', // true, false
+    // refetchOnWindowFocus: 'always', // true, false
+    // refetchInterval: 2000,
+    // refetchIntervalInBackground: true
+    // enabled: false,
+    onSuccess: onSuccess,
+    onError: onError
   });
+
   console.log({isLoading, isFetching});
 
   if (isLoading) {
@@ -27,6 +40,7 @@ export default function RQSuperHeroes() {
   return (
     <>
       <h2>RQ Super Heroes Page</h2>
+      <button onClick={refetch}>Fetch heroes</button>
       {data?.data.map((hero) => {
         return <div key={hero.name}>{hero.name}</div>
       })}
