@@ -12,7 +12,9 @@ export default function RQSuperHeroes() {
     cacheTime: 5000,
     staleTime: 10000,
     refetchOnMount : 'always', // true, false
-    refetchOnWindowFocus: 'always' // true, false
+    refetchOnWindowFocus: 'always', // true, false
+    refetchInterval: 2000,
+    refetchIntervalInBackground: true
   });
   console.log({isLoading, isFetching});
 
